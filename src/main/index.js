@@ -304,10 +304,14 @@ if (gotTheLock) {
 
       const windowOptions = {
         title: 'Media Window',
-        icon: join(process.resourcesPath, 'videoPlayer', `videoPlayer.${iconType}`),
+        icon: join(
+          process.resourcesPath,
+          'videoPlayer',
+          `videoPlayer.${iconType}`
+        ),
         frame: false,
         backgroundColor: 'black',
-        roundedCorners: false,
+        // roundedCorners: false,
         minHeight: 110,
         minWidth: 195,
         width: 1280,
