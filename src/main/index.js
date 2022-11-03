@@ -302,6 +302,9 @@ if (gotTheLock) {
       const screenInfo = getScreenInfo(win, mediaWin)
       const STARTING_POSITION = 50
 
+      win.webContents.send('log', JSON.stringify(screenInfo))
+      win.webContents.send('log', JSON.stringify(mediaWinOptions))
+
       const windowOptions = {
         title: 'Media Window',
         icon: join(

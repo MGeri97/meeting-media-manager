@@ -65,6 +65,10 @@ export function setMediaWindowPosition(win, mediaWin, mediaWinOptions) {
         ...(mediaWinOptions.type === 'window' && { height: 720 }),
       })
 
+      win.webContents.send('log', mediaWin.isFullScreen())
+      win.webContents.send('log', JSON.stringify(mediaWinOptions))
+      win.webContents.send('log', JSON.stringify(screenInfo))
+
       // Removed isFullScreen() check because of https://github.com/electron/electron/issues/35360
       if (
         mediaWinOptions.type === 'fullscreen' &&

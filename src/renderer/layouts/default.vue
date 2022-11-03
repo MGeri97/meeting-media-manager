@@ -168,6 +168,9 @@ export default defineComponent({
         this.$store.commit('stats/setUpdateSuccess', false)
       }
     })
+    ipcRenderer.on('log', (_e, msg: any) => {
+      console.log(msg)
+    })
     ipcRenderer.on('openPresentMode', () => {
       if (
         this.$getPrefs('media.enableMediaDisplayButton') &&
