@@ -66,11 +66,10 @@ export function setMediaWindowPosition(win, mediaWin, mediaWinOptions) {
       })
       if (
         mediaWinOptions.type === 'fullscreen' &&
-        screenInfo.otherScreens.length > 0 &&
-        !mediaWin.isFullScreen()
+        screenInfo.otherScreens.length > 0
       ) {
         mediaWin.setFullScreen(true)
-      } else if (mediaWinOptions.type === 'window' && mediaWin.isFullScreen()) {
+      } else if (mediaWinOptions.type === 'window') {
         mediaWin.setFullScreen(false)
       }
     }

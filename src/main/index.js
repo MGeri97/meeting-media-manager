@@ -311,7 +311,7 @@ if (gotTheLock) {
         ),
         frame: false,
         backgroundColor: 'black',
-        // roundedCorners: false,
+        roundedCorners: false,
         minHeight: 110,
         minWidth: 195,
         width: 1280,
