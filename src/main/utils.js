@@ -64,6 +64,8 @@ export function setMediaWindowPosition(win, mediaWin, mediaWinOptions) {
         ...(mediaWinOptions.type === 'window' && { width: 1280 }),
         ...(mediaWinOptions.type === 'window' && { height: 720 }),
       })
+
+      // Removed isFullScreen() check because of https://github.com/electron/electron/issues/35360
       if (
         mediaWinOptions.type === 'fullscreen' &&
         screenInfo.otherScreens.length > 0
